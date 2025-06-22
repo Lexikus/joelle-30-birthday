@@ -1,11 +1,152 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<div class="min-h-screen bg-base-200 flex items-center justify-center p-4">
+		<div class="text-center space-y-4">
+			<h1 class="text-4xl sm:text-6xl font-bold text-primary">
+				🎉 Happy Birthday! 🎉
+			</h1>
+			<p class="text-base sm:text-lg text-base-content">
+				Joelle feiert ihren 30. Geburtstag – mit guter Laune, viel Spass
+				und natürlich Geburtstagskuchen!
+			</p>
+			<div class="flex justify-center">
+				<div
+					class="bg-secondary text-secondary-content rounded-box p-4 shadow-lg"
+				>
+					<p class="text-xl font-semibold">Level 30 Unlocked! 🕹️</p>
+				</div>
+			</div>
+			<a class="btn btn-accent btn-wide" href="#location"
+				>Let's Party!🥳</a
+			>
+		</div>
+	</div>
+
+	<div
+		id="location"
+		class="min-h-screen bg-base-100 flex flex-col items-center justify-center p-4 space-y-6"
+	>
+		<h2 class="text-3xl sm:text-4xl font-bold text-primary text-center">
+			📍 Wo findet die Party statt?
+		</h2>
+		<p class="text-base sm:text-lg text-base-content text-center">
+			Hier feiert <span class="font-semibold">Joelle</span> ihren 30. Geburtstag
+			– kommt vorbei!
+		</p>
+		<div
+			class="w-full max-w-3xl aspect-video rounded-box overflow-hidden shadow-lg"
+		>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.500171457195!2d8.723792613092142!3d47.167642918065006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ab3ee92ab7627%3A0xff60301cb661bab2!2sBowlingcenter%20Schindellegi!5e0!3m2!1sde!2sch!4v1750600358882!5m2!1sde!2sch"
+				width="100%"
+				height="100%"
+				style="border:0;"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+				class="w-full h-full"></iframe>
+		</div>
+		<a
+			class="btn btn-accent btn-wide mt-4"
+			href="https://maps.app.goo.gl/JpSgosP7TPJ3qjHL6"
+		>
+			In Google Maps öffnen
+		</a>
+	</div>
+
+	<div
+		class="min-h-screen bg-base-200 flex flex-col items-center justify-center p-6 space-y-6"
+	>
+		<h2 class="text-3xl sm:text-4xl font-bold text-primary text-center">
+			🥂 Welcome Drink
+		</h2>
+
+		<div class="max-w-md text-center text-base-content space-y-4">
+			<p>
+				Zum Anstossen auf <span class="font-semibold"
+					>Joelle’s 30. Geburtstag</span
+				> lädt das Geburtstags-Paar euch herzlich auf einen Drink ein!
+			</p>
+			<p>
+				Geht einfach an die Bar und sagt, dass ihr den
+				<span class="font-semibold text-accent"
+					>„Birthday Anstoss Drink“</span
+				> möchtet – ihr könnt frei wählen, was ihr trinken möchtet.
+				<span class="text-neutral-content italic text-xs"
+					>(alles bis CHF 20)</span
+				>.
+			</p>
+			<p class="text-sm text-neutral-content">Prost & viel Spass! 🍻</p>
+		</div>
+	</div>
+
+	<div
+		class="min-h-screen bg-base-100 flex flex-col items-center justify-center p-6 space-y-6"
+	>
+		<h2 class="text-3xl sm:text-4xl font-bold text-primary text-center">
+			Das Programm
+		</h2>
+
+		<ul class="timeline timeline-vertical">
+			<li>
+				<div
+					class="timeline-start text-secondary font-semibold text-lg"
+				>
+					18:00 Uhr
+				</div>
+				<div class="timeline-middle">🎉</div>
+				<div class="timeline-end text-base-content">
+					<p>Ankunft & Willkommen</p>
+					<p class="text-sm text-neutral-content">
+						Zeit zum Ankommen, Quatschen & Anstossen
+					</p>
+				</div>
+				<hr />
+			</li>
+			<li>
+				<div
+					class="timeline-start text-secondary font-semibold text-lg"
+				>
+					19:00 Uhr
+				</div>
+				<div class="timeline-middle">🎳</div>
+				<div class="timeline-end text-base-content">
+					<p>Bowling</p>
+					<p class="text-sm text-neutral-content">
+						Schuhe an und los geht’s!
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div
+		class="min-h-screen bg-base-200 flex flex-col items-center justify-center p-6 space-y-6"
+	>
+		<h2 class="text-3xl sm:text-4xl font-bold text-primary text-center">
+			🎁 Geschenke
+		</h2>
+
+		<div class="max-w-md text-center space-y-4 text-base-content">
+			<p>
+				Joelle wünscht sich zum 30. Geburtstag etwas ganz Besonderes –
+				ein <span class="font-semibold text-secondary">KitchenAid</span
+				>!
+			</p>
+			<p>
+				Wer ihr diesen Wunsch mit einem Beitrag erfüllen möchte, kann
+				das gerne in bar oder per <span
+					class="font-semibold text-accent">Twint</span
+				> machen.
+			</p>
+			<p class="text-xs text-neutral-content">
+				Es ist natürlich kein Geschenk nötig – euer Kommen ist das
+				Schönste! ❤️
+			</p>
+		</div>
+	</div>
 </Layout>
